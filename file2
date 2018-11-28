@@ -1,0 +1,15 @@
+test file 2 
+
+public with sharing class ControllerHelp {
+	public PageReference redirectToHelp() {
+		String objname;
+		String pagename = getPageName();
+		if(pagename != null) {
+			if(pagename.startswith('objecthelp_')) {
+				objname = pagename.replace('objecthelp_', '') + '__c';
+			}
+		}
+		PageReference pr = new PageReference('/apex/objecthelp' + (objname == null ? '' : ('?objname='+objname)));
+		pr.setRedirect(false);
+		return pr;
+	}
