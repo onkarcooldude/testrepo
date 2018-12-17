@@ -83,6 +83,6 @@ private class TestAccountDeletion {
       @isTest static void testnothing() {
         // Test data setup
         // Create accounts with no opportunities by calling a utility method
-        //fdf 2nd time
+        //fdf 2nd timecx
     }
 }
